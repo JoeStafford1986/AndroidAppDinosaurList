@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">DinosaurListApp</string>
+    <string name="app_name">Dinosaur List App</string>
+    <string name="length_of_dinosaur">Length: </string>
+    <string name="weight_of_dinosaur">Weight: </string>
 </resources>
