@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -23,14 +24,12 @@ public class DinosaurListAdapter extends ArrayAdapter<Dinosaur> {
 
         Dinosaur currentDinosaur = getItem(position);
 
+        ImageView imageView = listItemView.findViewById(R.id.imageView);
+        int id = listItemView.getResources().getIdentifier(currentDinosaur.getName().toLowerCase(), "drawable", listItemView.getContext().getPackageName());
+        imageView.setImageResource(id);
+
         TextView name = (TextView) listItemView.findViewById(R.id.name);
         name.setText(currentDinosaur.getName());
-
-        TextView length = (TextView) listItemView.findViewById(R.id.length);
-        length.setText(currentDinosaur.getLength().toString());
-
-        TextView weight = (TextView) listItemView.findViewById(R.id.weight);
-        weight.setText(currentDinosaur.getWeight().toString());
 
         listItemView.setTag(currentDinosaur);
 

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class DinosaurActivity extends AppCompatActivity {
 
@@ -19,6 +20,15 @@ public class DinosaurActivity extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.imageView);
         int id = getResources().getIdentifier(dinosaur.getName().toLowerCase(), "drawable", getPackageName());
         imageView.setImageResource(id);
+
+        TextView name = (TextView) findViewById(R.id.name);
+        name.setText(dinosaur.getName());
+
+        TextView length = (TextView) findViewById(R.id.length);
+        length.setText(dinosaur.getLength().toString());
+
+        TextView weight = (TextView) findViewById(R.id.weight);
+        weight.setText(dinosaur.getWeight().toString());
 
         Log.d("Dinosaur Activity: ", dinosaur.getName());
     }
