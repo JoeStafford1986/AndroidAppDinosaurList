@@ -10,11 +10,13 @@ public class Dinosaur implements Serializable {
     private String name;
     private Double length;
     private Double weight;
+    private Integer image;
 
-    public Dinosaur(String name, Double length, Double weight) {
+    public Dinosaur(String name, Double length, Double weight, Integer image) {
         this.name = name;
         this.length = length;
         this.weight = weight;
+        this.image = image;
     }
 
     public String getName() {
@@ -27,5 +29,9 @@ public class Dinosaur implements Serializable {
 
     public Double getWeight() {
         return this.weight;
+    }
+
+    public Integer getImage() {
+        return this.image;
     }
 }

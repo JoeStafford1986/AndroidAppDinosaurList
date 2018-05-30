@@ -10,7 +10,7 @@ public class DinosaurTest {
 
     @Before
     public void before() {
-        dinosaur = new Dinosaur("Allosaurus", 12.0, 3.0);
+        dinosaur = new Dinosaur("Allosaurus", 12.0, 3.0, 0);
     }
 
     @Test
@@ -26,5 +26,10 @@ public class DinosaurTest {
     @Test
     public void canGetWeight() {
         assertEquals(3, dinosaur.getWeight(), 0.1);
+    }
+
+    @Test
+    public void canGetImageInt() {
+        assertEquals(0, dinosaur.getImage());
     }
 }

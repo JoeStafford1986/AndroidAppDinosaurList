@@ -24,14 +24,10 @@ public class DinosaurListActivity extends AppCompatActivity {
         listView.setAdapter(dinosaurListAdapter);
     }
 
-    public void onListItemClick(View listItem) {
-        Dinosaur dinosaur = (Dinosaur) listItem.getTag();
-    }
-
     public void getItem(View listItem) {
         Dinosaur dinosaur = (Dinosaur) listItem.getTag();
         Intent intent = new Intent(this, DinosaurActivity.class);
-        intent.putExtra("Dinosaur", dinosaur);
+        intent.putExtra("dinosaur", dinosaur);
         startActivity(intent);
     }
 }
