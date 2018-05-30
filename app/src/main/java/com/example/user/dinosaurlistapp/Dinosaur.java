@@ -6,10 +6,10 @@ package com.example.user.dinosaurlistapp;
 
 public class Dinosaur {
     private String name;
-    private double length;
-    private double weight;
+    private Double length;
+    private Double weight;
 
-    public Dinosaur(String name, double length, double weight) {
+    public Dinosaur(String name, Double length, Double weight) {
         this.name = name;
         this.length = length;
         this.weight = weight;
@@ -19,11 +19,11 @@ public class Dinosaur {
         return this.name;
     }
 
-    public double getLength() {
+    public Double getLength() {
         return this.length;
     }
 
-    public double getWeight() {
+    public Double getWeight() {
         return this.weight;
     }
 }
