@@ -1,7 +1,9 @@
 package com.example.user.dinosaurlistapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -18,7 +20,18 @@ public class DinosaurListActivity extends AppCompatActivity {
 
         DinosaurListAdapter dinosaurListAdapter = new DinosaurListAdapter(this, list);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
         listView.setAdapter(dinosaurListAdapter);
+    }
+
+    public void onListItemClick(View listItem) {
+        Dinosaur dinosaur = (Dinosaur) listItem.getTag();
+    }
+
+    public void getItem(View listItem) {
+        Dinosaur dinosaur = (Dinosaur) listItem.getTag();
+        Intent intent = new Intent(this, DinosaurActivity.class);
+        intent.putExtra("Dinosaur", dinosaur);
+        startActivity(intent);
     }
 }

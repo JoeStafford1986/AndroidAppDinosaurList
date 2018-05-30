@@ -32,6 +32,8 @@ public class DinosaurListAdapter extends ArrayAdapter<Dinosaur> {
         TextView weight = (TextView) listItemView.findViewById(R.id.weight);
         weight.setText(currentDinosaur.getWeight().toString());
 
+        listItemView.setTag(currentDinosaur);
+
         return listItemView;
     }
 
