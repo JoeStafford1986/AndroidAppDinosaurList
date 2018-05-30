@@ -25,10 +25,10 @@ public class DinosaurActivity extends AppCompatActivity {
         name.setText(dinosaur.getName());
 
         TextView length = (TextView) findViewById(R.id.length);
-        length.setText(getString(R.string.length_of_dinosaur) + dinosaur.getLength().toString());
+        length.setText(getString(R.string.length_of_dinosaur) + " " + dinosaur.getLength().toString() + " metres");
 
         TextView weight = (TextView) findViewById(R.id.weight);
-        weight.setText(getString(R.string.weight_of_dinosaur) + dinosaur.getWeight().toString());
+        weight.setText(getString(R.string.weight_of_dinosaur) + " " + dinosaur.getWeight().toString() + " tonne(s)");
 
         Log.d("Dinosaur Activity: ", dinosaur.getName());
     }
